@@ -16,5 +16,7 @@ source $CACHE_PATH/envsrc.sh
 echo "-----> Building application using Cargo"
 cd $BUILD_PATH
 rm -rf $CARGO_TARGET_DIR
+echo $BUILD_PATH
+echo $CACHE_PATH
 cargo build --release
 cargo install --path $BUILD_PATH
