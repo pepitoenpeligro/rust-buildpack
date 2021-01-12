@@ -4,10 +4,13 @@
 require 'yaml'
 
 build_path = ARGV[0]
+puts build_path
 
 cargo_metadata = File.read("#{build_path}/Cargo.toml")
 cargo_metadata.match /name = \"(.*)\"/
 app_executable = "bin/%s" % $1
+puts app_executable
+
 
 release_run_command = {}
 release_run_command['default_process_types'] = {'web' => app_executable}
