@@ -19,4 +19,4 @@ rm -rf $CARGO_TARGET_DIR
 echo $BUILD_PATH
 echo $CACHE_PATH
 cargo build --release
-cargo install --path $BUILD_PATH
+cp target/release/music_store $BUILD_PATH
