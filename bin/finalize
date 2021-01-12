@@ -19,4 +19,5 @@ rm -rf $CARGO_TARGET_DIR
 echo $BUILD_PATH
 echo $CACHE_PATH
 cargo build --release
+ls -la
 cp target/release/music_store $BUILD_PATH
