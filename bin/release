@@ -4,12 +4,12 @@
 require 'yaml'
 
 build_path = ARGV[0]
-puts build_path
+print build_path
 
 cargo_metadata = File.read("#{build_path}/Cargo.toml")
 cargo_metadata.match /name = \"(.*)\"/
 app_executable = "bin/%s" % $1
-puts app_executable
+print app_executable
 
 
 release_run_command = {}
