@@ -17,4 +17,4 @@ echo "-----> Building application using Cargo"
 cd $BUILD_PATH
 rm -rf $CARGO_TARGET_DIR
 cargo build --release
-cargo install --root $BUILD_PATH
+cargo install --path $BUILD_PATH
