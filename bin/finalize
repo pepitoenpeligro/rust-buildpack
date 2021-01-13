@@ -22,5 +22,5 @@ cargo build --release
 ls -la
 echo `pwd`
 ls target/*/ -1 | grep -vE "/target|^$"
-ls target/debug
+
 cp target/release/music_store $BUILD_PATH
