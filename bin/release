@@ -7,7 +7,7 @@ build_path = ARGV[0]
 
 cargo_metadata = File.read("#{build_path}/Cargo.toml")
 cargo_metadata.match /name = \"(.*)\"/
-app_executable = "bin/%s" % $1
+app_executable = "./%s" % $1
 
 
 release_run_command = {}
