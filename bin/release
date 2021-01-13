@@ -8,7 +8,7 @@ build_path = ARGV[0]
 cargo_metadata = File.read("#{build_path}/Cargo.toml")
 cargo_metadata.match /name = \"(.*)\"/
 app_executable = "./%s" % $1
-
+system("ls")
 
 release_run_command = {}
 release_run_command['default_process_types'] = {'web' => app_executable}
